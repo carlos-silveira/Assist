@@ -1,0 +1,70 @@
+.fondo{
+    -fx-background-color:#2D2A40;
+}
+.menu{
+  -fx-background-color  :#2D2A40;
+}
+.menu .label{
+-fx-text-fill:#F2F2F2;
+}
+.consola{
+    -fx-background-color: #2D2A40;
+    -fx-control-inner-background:  #2D2A40;
+    -fx-text-fill: #F2F2F2;
+    -fx-font-size:15px;
+    -fx-text-box-border: transparent;
+    -fx-background-insets: 0;
+    -fx-faint-focus-color: transparent;
+    -fx-paddding:10 10 10 10;
+}
+
+.editor{
+        -fx-background-color: #5679A6;
+        -fx-control-inner-background:#2D2A40;
+        -fx-text-fill: #F2F2F2;
+}
+.tab-pane .tab-header-area .tab-header-background{
+-fx-opacity: 0;
+}
+.tab-pane{
+-fx-tab-min-width:20px;
+}
+.tab{
+-fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab{
+-fx-background-color: #2D2A40;
+}
+.tab-pane .tab:selected{
+-fx-background-color: #2D2A40;
+}
+.tab .tab-label{
+-fx-alignment: CENTER;
+-fx-text-fill: #F2F2F2;
+-fx-font-size: 12px;
+-fx-font-weight: bold;
+}
+.tab:selected .tab-label{
+-fx-alignment: CENTER;
+-fx-text-fill: #F2F2F2;
+}
+.tab-pane:top *.tab-header-area{
+-fx-background-insets: 0, 0 0 1 0;
+-fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+}
+.bonRun{
+-fx-background-radius: 5em;
+-fx-min-width: 80px;
+-fx-min-height: 80px;
+-fx-max-width:  80px;
+-fx-max-height: 80px;
+-fx-padding: 3 6 6 6;
+-fx-background-insets: 0, 1;
+-fx-background-color: #7968ae;
+
+}
+.fondSplash{
+-fx-background-image:url("../img/fond.png");
+-fx-background-size:100% 100%;
+-fx-text-fill: #2D2A40;
+}
