@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" styleClass="fondoEditor" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.162-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <TabPane fx:id="Tabs" styleClass="editor" stylesheets="@estilos.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Pestaña 1">
+               <content>
+                  <StackPane fx:id="panelCodigo" />
+               </content>
+          </Tab>
+            <Tab text="+">
+               <content>
+                  <TextArea fx:id="txtResultado" styleClass="editor" stylesheets="@estilos.css" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="16.0" prefWidth="561.0" styleClass="menu" stylesheets="@estilos.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#evtOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" onAction="#saveAs" text="Save As" />
+                  <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#evtClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ejecutar">
+               <items>
+                  <MenuItem fx:id="menuRun" mnemonicParsing="false" onAction="#compilar" text="Ejecutar codigo" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Docs" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="100.0" styleClass="consola" stylesheets="@estilos.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="txtConsola" prefHeight="100.0" prefWidth="609.0" styleClass="consola" stylesheets="@estilos.css" />
+            <Button fx:id="botonRun" alignment="CENTER" contentDisplay="CENTER" maxHeight="103.0" maxWidth="105.0" mnemonicParsing="false" onAction="#compilar" prefHeight="103.0" prefWidth="105.0" styleClass="bonRun" stylesheets="@estilos.css" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+</BorderPane>
